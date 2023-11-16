@@ -58,8 +58,7 @@ async function seedInvoices(client) {
     amount INT NOT NULL,
     status VARCHAR(255) NOT NULL,
     date DATE NOT NULL
-  );
-`;
+    );`;
 
     console.log(`Created "invoices" table`);
 
@@ -69,8 +68,7 @@ async function seedInvoices(client) {
         (invoice) => client.sql`
         INSERT INTO invoices (customer_id, amount, status, date)
         VALUES (${invoice.customer_id}, ${invoice.amount}, ${invoice.status}, ${invoice.date})
-        ON CONFLICT (id) DO NOTHING;
-      `
+        ON CONFLICT (id) DO NOTHING;`
       )
     );
 
