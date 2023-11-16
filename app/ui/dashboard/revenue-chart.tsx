@@ -14,7 +14,6 @@ export default async function RevenueChart({
   revenue: Revenue[];
 }) {
   const chartHeight = 350;
-
   const { yAxisLabels, topLabel } = generateYAxis(revenue);
 
   if (!revenue || revenue.length === 0) {
