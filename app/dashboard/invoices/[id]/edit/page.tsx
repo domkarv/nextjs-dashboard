@@ -5,7 +5,7 @@ import { fetchCustomers, fetchInvoiceById } from '@/app/lib/data';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Edit | Acme Dashboard',
+  title: 'Edit',
 };
 
 export default async function Page({ params }: { params: { id: string } }) {
