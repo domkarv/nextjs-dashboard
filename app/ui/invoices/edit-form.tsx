@@ -20,7 +20,11 @@ export default function EditInvoiceForm({
   customers: CustomerField[];
 }) {
   const initialState = { message: null, errors: {} };
+
+  // Create a new function by binding the invoice ID to the updateInvoice function
   const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
+
+  // Initialize form state using the useFormState hook with the bound function and initial state
   const [state, dispatch] = useFormState(updateInvoiceWithId, initialState);
 
   return (
